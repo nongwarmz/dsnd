@@ -1,9 +1,9 @@
 import math
 import matplotlib.pyplot as plt
-from .Generaldistribution import Distribution
+from Generaldistribution import Distribution
 
 class Binomial(Distribution):
-    """ Binomial distribution class for calculating and 
+    """ Binomial distribution class for calculating and
     visualizing a Binomial distribution.
     
     Attributes:
@@ -18,18 +18,18 @@ class Binomial(Distribution):
             
     """
     
-    #       A binomial distribution is defined by two variables: 
+    #       A binomial distribution is defined by two variables:
     #           the probability of getting a positive outcome
     #           the number of trials
     
     #       If you know these two values, you can calculate the mean and the standard deviation
-    #       
+    #
     #       For example, if you flip a fair coin 25 times, p = 0.5 and n = 25
     #       You can then calculate the mean and standard deviation with the following formula:
     #           mean = p * n
     #           standard deviation = sqrt(n * p * (1 - p))
     
-    #       
+    #
     
     def __init__(self, prob=.5, size=20):
         
@@ -44,19 +44,19 @@ class Binomial(Distribution):
         #       mean and the standard deviation of the distribution
         #
         #       Hint: You need to define the calculate_mean() and calculate_stdev() methods
-        #               farther down in the code starting in line 55. 
+        #               farther down in the code starting in line 55.
         #               The init function can get access to these methods via the self
-        #               variable.   
-        pass            
+        #               variable.
+        pass
     
     def calculate_mean(self):
     
         """Function to calculate the mean from p and n
         
-        Args: 
+        Args:
             None
         
-        Returns: 
+        Returns:
             float: mean of the data set
     
         """
@@ -64,7 +64,7 @@ class Binomial(Distribution):
         # TODO: calculate the mean of the Binomial distribution. Store the mean
         #       via the self variable and also return the new mean value
                 
-        pass 
+        pass
 
 
 
@@ -72,10 +72,10 @@ class Binomial(Distribution):
 
         """Function to calculate the standard deviation from p and n.
         
-        Args: 
+        Args:
             None
         
-        Returns: 
+        Returns:
             float: standard deviation of the data set
     
         """
@@ -91,14 +91,14 @@ class Binomial(Distribution):
     
         """Function to calculate p and n from the data set
         
-        Args: 
+        Args:
             None
         
-        Returns: 
+        Returns:
             float: the p value
             float: the n value
     
-        """        
+        """
         
         # TODO: The read_data_file() from the Generaldistribution class can read in a data
         #       file. Because the Binomaildistribution class inherits from the Generaldistribution class,
@@ -106,9 +106,9 @@ class Binomial(Distribution):
         #       doesn't update the mean or standard deviation of
         #       a distribution. Hence you are going to write a method that calculates n, p, mean and
         #       standard deviation from a data set and then updates the n, p, mean and stdev attributes.
-        #       Assume that the data is a list of zeros and ones like [0 1 0 1 1 0 1]. 
+        #       Assume that the data is a list of zeros and ones like [0 1 0 1 1 0 1].
         #
-        #       Write code that: 
+        #       Write code that:
         #           updates the n attribute of the binomial distribution
         #           updates the p value of the binomial distribution by calculating the
         #               number of positive trials divided by the total trials
@@ -120,7 +120,7 @@ class Binomial(Distribution):
         pass
         
     def plot_bar(self):
-        """Function to output a histogram of the instance variable data using 
+        """Function to output a histogram of the instance variable data using
         matplotlib pyplot library.
         
         Args:
@@ -141,7 +141,7 @@ class Binomial(Distribution):
         #       1 on the x-axis and 20 on the y-axis
         
         #       Make sure to label the chart with a title, x-axis label and y-axis label
-        pass        
+        pass
         
     def pdf(self, k):
         """Probability density function calculator for the gaussian distribution.
@@ -155,14 +155,14 @@ class Binomial(Distribution):
         """
         
         # TODO: Calculate the probability density function for a binomial distribution
-        #  For a binomial distribution with n trials and probability p, 
+        #  For a binomial distribution with n trials and probability p,
         #  the probability density function calculates the likelihood of getting
-        #   k positive outcomes. 
-        # 
+        #   k positive outcomes.
+        #
         #   For example, if you flip a coin n = 60 times, with p = .5,
         #   what's the likelihood that the coin lands on heads 40 out of 60 times?
         
-        pass        
+        pass
 
     def plot_bar_pdf(self):
 
@@ -206,13 +206,13 @@ class Binomial(Distribution):
             raise
         
         # TODO: Define addition for two binomial distributions. Assume that the
-        # p values of the two distributions are the same. The formula for 
+        # p values of the two distributions are the same. The formula for
         # summing two binomial distributions with different p values is more complicated,
         # so you are only expected to implement the case for two distributions with equal p.
         
         # the try, except statement above will raise an exception if the p values are not equal
         
-        # Hint: You need to instantiate a new binomial object with the correct n, p, 
+        # Hint: You need to instantiate a new binomial object with the correct n, p,
         #   mean and standard deviation values. The __add__ method should return this
         #   new binomial object.
         
