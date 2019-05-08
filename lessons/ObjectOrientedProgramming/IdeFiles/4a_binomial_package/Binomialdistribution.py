@@ -47,7 +47,11 @@ class Binomial(Distribution):
         #               farther down in the code starting in line 55.
         #               The init function can get access to these methods via the self
         #               variable.
-        pass
+        self.p = prob
+        self.n = size
+        mu = self.calculate_mean()
+        sigma = self.calculate_stdev()
+        Distribution.__init__(self, mu, sigma)
     
     def calculate_mean(self):
     
@@ -63,8 +67,8 @@ class Binomial(Distribution):
         
         # TODO: calculate the mean of the Binomial distribution. Store the mean
         #       via the self variable and also return the new mean value
-                
-        pass
+        self.mean = self.p * self.n
+        return self.mean
 
 
 
@@ -83,8 +87,9 @@ class Binomial(Distribution):
         # TODO: calculate the standard deviation of the Binomial distribution. Store
         #       the result in the self standard deviation attribute. Return the value
         #       of the standard deviation.
-        pass
-        
+        # standard deviation = sqrt(n * p * (1 - p))
+        self.stdev = np.sqrt(self.n * self.p * (1 - self.p))
+        return stdev
         
         
     def replace_stats_with_data(self):
@@ -117,7 +122,11 @@ class Binomial(Distribution):
         #
         #       Hint: You can use the calculate_mean() and calculate_stdev() methods
         #           defined previously.
-        pass
+        self.p = np.mean(self.data)
+        self.n = len(self.data)
+        self.mean = calculate_mean()
+        self.stdev = calculate_stdev()
+        return self.p, self.n
         
     def plot_bar(self):
         """Function to output a histogram of the instance variable data using

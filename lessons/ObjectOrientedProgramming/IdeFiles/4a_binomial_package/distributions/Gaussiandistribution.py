@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from .Generaldistribution import Distribution
 
 class Gaussian(Distribution):
-	""" Gaussian distribution class for calculating and 
+	""" Gaussian distribution class for calculating and
 	visualizing a Gaussian distribution.
 	
 	Attributes:
@@ -22,10 +22,10 @@ class Gaussian(Distribution):
 	
 		"""Function to calculate the mean of the data set.
 		
-		Args: 
+		Args:
 			None
 		
-		Returns: 
+		Returns:
 			float: mean of the data set
 	
 		"""
@@ -42,10 +42,10 @@ class Gaussian(Distribution):
 
 		"""Function to calculate the standard deviation of the data set.
 		
-		Args: 
+		Args:
 			sample (bool): whether the data represents a sample or population
 		
-		Returns: 
+		Returns:
 			float: standard deviation of the data set
 	
 		"""
@@ -71,7 +71,7 @@ class Gaussian(Distribution):
 		
 		
 	def plot_histogram(self):
-		"""Function to output a histogram of the instance variable data using 
+		"""Function to output a histogram of the instance variable data using
 		matplotlib pyplot library.
 		
 		Args:
@@ -103,11 +103,11 @@ class Gaussian(Distribution):
 
 	def plot_histogram_pdf(self, n_spaces = 50):
 
-		"""Function to plot the normalized histogram of the data and a plot of the 
+		"""Function to plot the normalized histogram of the data and a plot of the
 		probability density function along the same range
 		
 		Args:
-			n_spaces (int): number of data points 
+			n_spaces (int): number of data points
 		
 		Returns:
 			list: x values for the pdf plot
